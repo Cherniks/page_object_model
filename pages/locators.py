@@ -10,7 +10,7 @@ class LogPageLocators():
 
 class ProductPageLocators():
     BASBUT = (By.CSS_SELECTOR, ".btn-add-to-basket")
-    PRICEBASK = (By.CSS_SELECTOR, ".btn.btn-default.navbar-btn.btn-cart.navbar-right.visible-xs-inline-block")
-    NAMEACCEPT = (By.CSS_SELECTOR, ".alertinner")
-    PRICEBOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main h1")
-    NAMEBOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main p")
+    PRICEBASK = (By.CSS_SELECTOR, ".alert-info p strong")
+    NAMEACCEPT = (By.CSS_SELECTOR, "#messages .alert .alertinner strong")
+    NAMEBOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main h1")
+    PRICEBOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main p.price_color")
