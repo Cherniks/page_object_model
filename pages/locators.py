@@ -14,3 +14,15 @@ class ProductPageLocators():
     NAMEACCEPT = (By.CSS_SELECTOR, "#messages .alert .alertinner strong")
     NAMEBOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main h1")
     PRICEBOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main p.price_color")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
+
+
+
+
+
+
+
