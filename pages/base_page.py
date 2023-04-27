@@ -64,3 +64,12 @@ class BasePage():
     # Найдем элемент на странице, передадим поиск в функцию is_element_present для корректного отображения ошибки
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
+    # Перейдем на страницу с корзиной
+    def go_to_basket(self):
+        link = self.browser.find_element(*BasePageLocators.BASKET_LINK)
+        link.click()
+
+    # Найдем элемент корзины на странице
+    def has_basket_btn(self):
+        assert self.is_element_present(*BasePageLocators.BASKET_LINK), "Basket link is not presented"
