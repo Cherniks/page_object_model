@@ -1,3 +1,4 @@
+# Здесь функции для обработки любой страницы, они общие для всех
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import math
@@ -16,7 +17,7 @@ class BasePage():
         self.browser.get(self.url)
 
     # Создадим функцию обработки ошибок, которые возникают в случае отсутствия элемента на странице
-    # Функция принимает два аргумента - с помощью какого метода ищем, и что именно ищемс
+    # Функция принимает два аргумента - с помощью какого метода ищем, и что именно ищем
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
@@ -61,7 +62,7 @@ class BasePage():
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
-    # Найдем элемент на странице, передадим поиск в функцию is_element_present для корректного отображения ошибки
+    # Проверяем есть ли на страница кнопка авторизации
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
@@ -74,6 +75,7 @@ class BasePage():
     def has_basket_btn(self):
         assert self.is_element_present(*BasePageLocators.BASKET_LINK), "Basket link is not presented"
 
+    # Проверка на то что пользователь авторизован, должна быть иконка пользователя
     def should_be_authorized_user(self):
         assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
                                                                      " probably unauthorised user"

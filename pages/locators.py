@@ -1,12 +1,14 @@
+# Здесь располагаются все константы
 from selenium.webdriver.common.by import By
 
-# Добавляем переменную, в которой будет храниться данные о том, какой элемент нужно найти и с помощью чего
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LINK = 'https://selenium1py.pythonanywhere.com/'
 
 class LogPageLocators():
     LOG_FORM = (By.CSS_SELECTOR, ".login_form")
     REG_FORM = (By.CSS_SELECTOR, ".register_form")
+    LINK_LOG = 'https://selenium1py.pythonanywhere.com/ru/accounts/login/'
 
 class ProductPageLocators():
     BASBUT = (By.CSS_SELECTOR, ".btn-add-to-basket")
@@ -14,6 +16,7 @@ class ProductPageLocators():
     NAMEACCEPT = (By.CSS_SELECTOR, "#messages .alert .alertinner strong")
     NAMEBOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main h1")
     PRICEBOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main p.price_color")
+    LINK_PROD = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
