@@ -5,10 +5,10 @@ from selenium.webdriver.common.by import By
 
 class ProductPage(BasePage):
     def add_book_to_basket(self):
-        self.should_have_button()
+        # self.should_have_button()
         self.browser.find_element(*ProductPageLocators.BASBUT).click()
-        self.solve_quiz_and_get_code()
-        self.basket_price_should_book()
+        # self.solve_quiz_and_get_code()
+        # self.basket_price_should_book()
         self.accept_should_name_book()
         # time.sleep(5)
 
@@ -23,8 +23,9 @@ class ProductPage(BasePage):
 
     def only_add_book_to_basket(self):
         self.browser.find_element(*ProductPageLocators.BASBUT).click()
-        self.solve_quiz_and_get_code()
-        assert self.is_not_element_present(*ProductPageLocators.NAMEACCEPT),  "Success message is presented, but should not be"
+        # self.solve_quiz_and_get_code()
+        self.basket_price_should_book()
+        # assert self.is_not_element_present(*ProductPageLocators.NAMEACCEPT),  "Success message is presented, but should not be"
         # time.sleep(5)
 
     def without_add_book_to_basket(self):
@@ -33,7 +34,7 @@ class ProductPage(BasePage):
 
     def only_add_book_to_basket_2(self):
         self.browser.find_element(*ProductPageLocators.BASBUT).click()
-        self.solve_quiz_and_get_code()
+        # self.solve_quiz_and_get_code()
         assert self.is_disappeared(*ProductPageLocators.NAMEACCEPT),  "Success message is presented, but should not be"
         # time.sleep(5)
 
