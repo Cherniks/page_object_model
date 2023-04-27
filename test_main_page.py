@@ -1,4 +1,4 @@
-#
+# Главный файл тестов по проверке главной страницы
 from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 
